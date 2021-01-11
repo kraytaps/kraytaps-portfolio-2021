@@ -1,13 +1,13 @@
 .project-description {
   position: absolute;
-  top: 10%;
+  top: 12.5%;
   left: 50%;
   transform: translateX(-50%);
-  height: 50%;
+  height: 40%;
   width: 80%;
   overflow: scroll;
   z-index: 1;
-  padding: 1em;
+  // padding: 1em;
   display: flex;
   // align-items: center;
   @include desktop {
