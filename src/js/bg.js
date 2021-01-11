@@ -58,7 +58,7 @@ const handleMouseMove = (e) => {
   let arcY = e.clientY / window.innerHeight - 0.5;
   
   // only do this on desktop
-  if (window.innerWidth > 900) {
+  if (window.innerWidth > 1200) {
     camera.position.x = 0 + 150 * arcX;
     camera.position.y = 100 - 100 * arcY;
     camera.updateMatrix();

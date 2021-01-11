@@ -83,14 +83,44 @@
 .introduction h3 {
   color: #415077;
   font-family: "Karla", sans-serif;
-  font-size: 1em;
+  font-size: 1.25em;
   text-align: center;
+  font-weight: 400;
 }
 @media (min-width: 1200px) {
   .introduction h3 {
     text-align: left;
     font-size: 1.375em;
   }
+}
+
+#logo {
+  font-family: "Karla";
+  font-weight: 600;
+  font-size: 1.25em;
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  margin-left: 0.25em;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+@media (min-width: 1200px) {
+  #logo {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    top: 0;
+    left: 3%;
+    transform: none;
+  }
+}
+#logo a {
+  text-decoration: none;
+  color: #415077;
+}
+#logo .dot {
+  color: aqua;
 }
 
 #navbar {
@@ -111,19 +141,29 @@
     width: 95%;
     left: 2.5%;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     transform: none;
   }
 }
 #navbar ul {
   font-family: "Karla", sans-serif;
-  font-size: 1.25em;
-  font-weight: 600;
+  font-weight: 500;
   display: flex;
   flex-direction: row;
+  font-size: 1em;
+}
+@media (min-width: 1200px) {
+  #navbar ul {
+    font-size: 1.25em;
+  }
 }
 #navbar ul li {
-  margin: 0 2em;
+  margin: 0 1em;
+}
+@media (min-width: 1200px) {
+  #navbar ul li {
+    margin: 0 2em;
+  }
 }
 #navbar ul li a {
   text-decoration: none;
@@ -149,7 +189,6 @@
   z-index: 1;
   padding: 1em;
   display: flex;
-  align-items: center;
 }
 @media (min-width: 1200px) {
   .project-description {
@@ -242,6 +281,106 @@
 }
 .project-catalog .project.unfocused {
   opacity: 0.5;
+}
+
+#contact {
+  position: fixed;
+  z-index: 1;
+  font-family: "Karla", sans-serif;
+  color: #415077;
+  margin: 0;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+}
+@media (min-width: 1200px) {
+  #contact {
+    width: unset;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+  }
+}
+#contact .contact-intro h3 {
+  margin: 0;
+  font-size: 1.5em;
+}
+@media (min-width: 1200px) {
+  #contact .contact-intro h3 {
+    font-size: 2.5em;
+  }
+}
+#contact .contact-intro h5 {
+  margin: 0.5em 0;
+  font-weight: 400;
+  font-size: 0.875em;
+}
+@media (min-width: 1200px) {
+  #contact .contact-intro h5 {
+    font-size: 1.25em;
+  }
+}
+#contact .contact-email {
+  margin: 4em 0;
+}
+#contact .contact-email h6 {
+  font-weight: 400;
+  margin: 0.5em 0;
+  font-size: 1em;
+}
+@media (min-width: 1200px) {
+  #contact .contact-email h6 {
+    font-size: 1.25em;
+  }
+}
+#contact .contact-email a {
+  font-weight: 600;
+  color: #415077;
+  font-size: 1.25em;
+}
+@media (min-width: 1200px) {
+  #contact .contact-email a {
+    font-size: 2em;
+  }
+}
+#contact .contact-others h6 {
+  font-weight: 400;
+  margin: 0.5em 0;
+  font-size: 1em;
+}
+@media (min-width: 1200px) {
+  #contact .contact-others h6 {
+    font-size: 1.25em;
+  }
+}
+#contact .contact-others ul {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1200px) {
+  #contact .contact-others ul {
+    flex-direction: row;
+  }
+}
+#contact .contact-others ul li {
+  margin: 0.5em 0 0 0;
+}
+@media (min-width: 1200px) {
+  #contact .contact-others ul li {
+    margin: 0 3em 0 0;
+  }
+}
+#contact .contact-others ul li a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #415077;
+  font-size: 1.25em;
+}
+@media (min-width: 1200px) {
+  #contact .contact-others ul li a {
+    font-size: 2em;
+  }
 }
 
 * {

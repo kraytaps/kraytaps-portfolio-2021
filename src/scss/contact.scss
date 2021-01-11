@@ -1,0 +1,85 @@
+#contact {
+  position: fixed;
+  z-index: 1;
+  font-family: "Karla", sans-serif;
+  color: #415077;
+  margin: 0;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  @include desktop {
+    width: unset;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+  }
+  .contact-intro {
+    h3 {
+      margin: 0;
+      font-size: 1.5em;
+      @include desktop {
+        font-size: 2.5em;
+      }
+    }
+    h5 {
+      margin: 0.5em 0;
+      font-weight: 400;
+      font-size: 0.875em;
+      @include desktop {
+        font-size: 1.25em;
+      }
+    }
+  }
+  .contact-email {
+    margin: 4em 0;
+    h6 {
+      font-weight: 400;
+      margin: 0.5em 0;
+      font-size: 1em;
+      @include desktop {
+        font-size: 1.25em;
+      }
+    }
+    a {
+      font-weight: 600;
+      color: #415077;
+      font-size: 1.25em;
+      @include desktop {
+        font-size: 2em;
+      }
+    }
+  }
+  .contact-others {
+    h6 {
+      font-weight: 400;
+      margin: 0.5em 0;
+      font-size: 1em;
+      @include desktop {
+        font-size: 1.25em;
+      }
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      @include desktop {
+        flex-direction: row;
+      }
+      li {
+        margin: 0.5em 0 0 0;
+        @include desktop {
+          margin: 0 3em 0 0;
+        }
+        a {
+          text-decoration: none;
+          font-weight: 600;
+          color: #415077;
+          font-size: 1.25em;
+          @include desktop {
+            font-size: 2em;
+          }
+        }
+      }
+    }
+  }
+}

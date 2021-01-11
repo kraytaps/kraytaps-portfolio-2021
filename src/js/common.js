@@ -1,7 +1,7 @@
 const currProject = $(".project");
 
 currProject.on("mouseenter", () => {
-	if (window.innerWidth > 1000) {
+	if (window.innerWidth > 1200) {
 		$(".project:not(:hover)").addClass("unfocused");
 	}
 });

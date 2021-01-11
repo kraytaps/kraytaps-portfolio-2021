@@ -12,14 +12,44 @@
   h3 {
     color: #415077;
     font-family: "Karla", sans-serif;
-    font-size: 1em;
+    font-size: 1.25em;
     text-align: center;
+    font-weight: 400;
     @include desktop {
       text-align: left;
       font-size: 1.375em;
     }
   }
   z-index: 1;
+}
+
+#logo {
+  font-family: "Karla";
+  font-weight: 600;
+  font-size: 1.25em;
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  margin-left: 0.25em;
+  transform: translateX(-50%);
+  z-index: 2;
+  @include desktop {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    top: 0;
+    left: 3%;
+    transform: none;
+  }
+  a {
+    text-decoration: none;
+    color: #415077;
+  }
+  .name {
+  }
+  .dot {
+    color: aqua;
+  }
 }
 
 #navbar {
@@ -38,17 +68,23 @@
     width: 95%;
     left: 2.5%;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     transform: none;
   }
   ul {
     font-family: "Karla", sans-serif;
-    font-size: 1.25em;
-    font-weight: 600;
+    font-weight: 500;
     display: flex;
     flex-direction: row;
+    font-size: 1em;
+    @include desktop {
+      font-size: 1.25em;
+    }
     li {
-      margin: 0 2em;
+      margin: 0 1em;
+      @include desktop {
+        margin: 0 2em;
+      }
       a {
         text-decoration: none;
         color: #415077;

@@ -35712,7 +35712,7 @@ var handleMouseMove = function handleMouseMove(e) {
   var arcX = e.clientX / window.innerWidth - 0.5;
   var arcY = e.clientY / window.innerHeight - 0.5; // only do this on desktop
 
-  if (window.innerWidth > 900) {
+  if (window.innerWidth > 1200) {
     camera.position.x = 0 + 150 * arcX;
     camera.position.y = 100 - 100 * arcY;
     camera.updateMatrix();
@@ -35944,7 +35944,7 @@ $(".link").on("mouseleave", function () {
 },{}],"js/common.js":[function(require,module,exports) {
 var currProject = $(".project");
 currProject.on("mouseenter", function () {
-  if (window.innerWidth > 1000) {
+  if (window.innerWidth > 1200) {
     $(".project:not(:hover)").addClass("unfocused");
   }
 });
@@ -36029,7 +36029,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51151" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51894" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
