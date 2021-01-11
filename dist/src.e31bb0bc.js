@@ -35676,10 +35676,11 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 var Colors = {
   red: 0xf25346,
   white: 0xdde3f1,
-  brown: 0x59332e,
-  pink: 0xf5986e,
-  brownDark: 0x23190f,
-  blue: 0x68c3c0
+  pink: 0xDA75BE,
+  purple: 0x8F75DA,
+  blue: 0x68c3c0,
+  lightblue: 0x8FE8E5,
+  aqua: 0x18D1CB
 };
 var scene, camera, fov, aspectRatio, nearPlane, farPlane, HEIGHT, WIDTH, renderer, container;
 
@@ -35687,7 +35688,15 @@ var createScene = function createScene() {
   HEIGHT = window.innerHeight;
   WIDTH = window.innerWidth;
   scene = new THREE.Scene();
-  scene.fog = new THREE.Fog(0xd2f3f0, 100, 950);
+
+  if (window.location.pathname.includes("contact")) {
+    scene.fog = new THREE.Fog(0xFAE0F7, 100, 950);
+  } else if (window.location.pathname.includes("projects")) {
+    scene.fog = new THREE.Fog(0x8ce2db, 100, 950);
+  } else {
+    scene.fog = new THREE.Fog(0xD2F3F0, 100, 950);
+  }
+
   aspectRatio = WIDTH / HEIGHT;
   fov = 60;
   nearPlane = 1;
@@ -35762,12 +35771,31 @@ var Sea = function Sea() {
     });
   }
 
-  var mat = new THREE.MeshPhongMaterial({
-    color: Colors.blue,
-    transparent: true,
-    opacity: 0.6,
-    shading: THREE.FlatShading
-  });
+  var mat;
+
+  if (window.location.pathname.includes("contact")) {
+    mat = new THREE.MeshPhongMaterial({
+      color: Colors.pink,
+      transparent: true,
+      opacity: 0.85,
+      shading: THREE.FlatShading
+    });
+  } else if (window.location.pathname.includes("projects")) {
+    mat = new THREE.MeshPhongMaterial({
+      color: Colors.aqua,
+      transparent: true,
+      opacity: 0.85,
+      shading: THREE.FlatShading
+    });
+  } else {
+    mat = new THREE.MeshPhongMaterial({
+      color: Colors.red,
+      transparent: true,
+      opacity: 0.85,
+      shading: THREE.FlatShading
+    });
+  }
+
   this.mesh = new THREE.Mesh(geom, mat);
   this.mesh.receiveShadow = true;
 };
