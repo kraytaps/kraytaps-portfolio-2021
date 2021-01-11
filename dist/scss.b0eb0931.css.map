@@ -1,0 +1,1 @@
+{"version":3,"sources":["scss/index.css"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA;AACA;AACA","file":"scss.b0eb0931.css","sourceRoot":"..\\src","sourcesContent":["@import url(\"https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap\");\r\n/* @import \"./cursor.scss\"; */\r\n\r\nh3 {\r\n  font-family: \"Karla\", sans-serif;\r\n}\r\n"]}

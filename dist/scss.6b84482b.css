@@ -1,0 +1,278 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+.cursor {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .cursor {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    transition: 0.3s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform, 0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) opacity;
+    user-select: none;
+    pointer-events: none;
+    z-index: 10000;
+    transform: scale(1);
+    transform: translate(-50%, -50%);
+  }
+  .cursor.is-moving {
+    transform: translate(-50%, -50%) scale(0.5);
+    transition: 0.1s ease-in-out transform;
+  }
+  .cursor.active {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+    transition: 0.1s ease-in-out transform;
+  }
+  .cursor.menu-active {
+    opacity: 1;
+    transform: scale(0);
+  }
+  .cursor.hovered {
+    opacity: 1;
+  }
+}
+
+.cursor-follower {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .cursor-follower {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    transition: 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform, 0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) opacity, 0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) background;
+    user-select: none;
+    pointer-events: none;
+    z-index: 10000;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    mix-blend-mode: difference;
+  }
+  .cursor-follower.mousedown {
+    transform: translate(-50%, -50%) scale(1.1);
+    transition: 0.2s ease scale, 0.2s ease transform;
+  }
+  .cursor-follower.active {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.3);
+  }
+  .cursor-follower.menu-active {
+    opacity: 1;
+    transform: scale(3);
+  }
+  .cursor-follower.hovered {
+    opacity: 1;
+  }
+}
+
+.introduction {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+@media (min-width: 1200px) {
+  .introduction {
+    top: 50%;
+    left: 20%;
+    width: 15%;
+    transform: translateY(-50%);
+  }
+}
+.introduction h3 {
+  color: #415077;
+  font-family: "Karla", sans-serif;
+  font-size: 1em;
+  text-align: center;
+}
+@media (min-width: 1200px) {
+  .introduction h3 {
+    text-align: left;
+    font-size: 1.375em;
+  }
+}
+
+#navbar {
+  z-index: 1;
+  position: fixed;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #415077;
+}
+@media (min-width: 1200px) {
+  #navbar {
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    height: 10vh;
+    width: 95%;
+    left: 2.5%;
+    align-items: center;
+    justify-content: space-between;
+    transform: none;
+  }
+}
+#navbar ul {
+  font-family: "Karla", sans-serif;
+  font-size: 1.25em;
+  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+}
+#navbar ul li {
+  margin: 0 2em;
+}
+#navbar ul li a {
+  text-decoration: none;
+  color: #415077;
+}
+
+#world {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: linear-gradient(#edf7f6, #d2f3f0);
+}
+
+.project-description {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 50%;
+  width: 80%;
+  overflow: scroll;
+  z-index: 1;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+}
+@media (min-width: 1200px) {
+  .project-description {
+    top: 50%;
+    left: 10%;
+    width: 40%;
+    transform: translateY(-50%);
+  }
+}
+.project-description p {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  color: #415077;
+  font-family: "Karla", sans-serif;
+  font-size: 1.125em;
+  font-weight: 400;
+  line-height: 140%;
+  text-align: center;
+  z-index: 2;
+}
+@media (min-width: 1200px) {
+  .project-description p {
+    text-align: left;
+    font-size: 1.25em;
+  }
+}
+
+.project-catalog {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+}
+@media (min-width: 1200px) {
+  .project-catalog {
+    top: 50%;
+    left: 60%;
+    width: 30%;
+    transform: translateY(-50%);
+  }
+}
+.project-catalog .project {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  font-family: "Karla", sans-serif;
+  color: #415077;
+  border-bottom: 1px solid #415077;
+  opacity: 1;
+  transition: all 0.2s ease-in-out;
+  padding: 0.25em 0;
+  margin: 0.5em 0;
+}
+@media (min-width: 1200px) {
+  .project-catalog .project {
+    padding: 1.5em 0;
+    margin: 0.5em 0;
+  }
+}
+.project-catalog .project .no {
+  font-size: 1.5em;
+  margin-right: 1em;
+  text-align: center;
+  width: 20%;
+}
+@media (min-width: 1200px) {
+  .project-catalog .project .no {
+    text-align: unset;
+    width: unset;
+    font-size: 1.5em;
+    margin-right: 2em;
+  }
+}
+.project-catalog .project .title {
+  font-weight: 600;
+  font-size: 1.5em;
+  text-align: left;
+  width: 80%;
+}
+@media (min-width: 1200px) {
+  .project-catalog .project .title {
+    font-weight: 600;
+    font-size: 2em;
+  }
+}
+.project-catalog .project.unfocused {
+  opacity: 0.5;
+}
+
+* {
+  cursor: none;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  position: absolute;
+  top: 0;
+  min-height: 100vh;
+  width: 100%;
+}
+
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+  /* make scrollbar transparent */
+}
+
+/*# sourceMappingURL=/scss.6b84482b.css.map */

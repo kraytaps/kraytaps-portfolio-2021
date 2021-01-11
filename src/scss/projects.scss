@@ -1,0 +1,97 @@
+.project-description {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 50%;
+  width: 80%;
+  overflow: scroll;
+  z-index: 1;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  @include desktop {
+    top: 50%;
+    left: 10%;
+    width: 40%;
+    transform: translateY(-50%);
+  }
+  p {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    color: #415077;
+    font-family: "Karla", sans-serif;
+    font-size: 1.125em;
+    font-weight: 400;
+    line-height: 140%;
+    text-align: center;
+    @include desktop {
+      text-align: left;
+      font-size: 1.25em;
+    }
+    z-index: 2;
+  }
+}
+
+.project-catalog {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  @include desktop {
+    top: 50%;
+    left: 60%;
+    width: 30%;
+    transform: translateY(-50%);
+  }
+
+  .project {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    font-family: "Karla", sans-serif;
+    color: #415077;
+    border-bottom: 1px solid #415077;
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+    padding: 0.25em 0;
+    margin: 0.5em 0;
+    @include desktop {
+      padding: 1.5em 0;
+      margin: 0.5em 0;
+    }
+
+    .no {
+      font-size: 1.5em;
+      margin-right: 1em;
+      text-align: center;
+      width: 20%;
+      @include desktop {
+        text-align: unset;
+        width: unset;
+        font-size: 1.5em;
+        margin-right: 2em;
+      }
+    }
+
+    .title {
+      font-weight: 600;
+      font-size: 1.5em;
+      text-align: left;
+      width: 80%;
+      @include desktop {
+        font-weight: 600;
+        font-size: 2em;
+      }
+    }
+
+    &.unfocused {
+      opacity: 0.5;
+    }
+  }
+}

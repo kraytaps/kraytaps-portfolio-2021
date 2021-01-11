@@ -1,0 +1,24 @@
+{
+  "name": "portfolio-website",
+  "version": "1.0.0",
+  "description": "portfolio website 2020",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html --open",
+    "clean": "rm -rf dist/*",
+    "build:parcel": "parcel build src/index.html --no-content-hash --no-minify --no-source-maps --public-url ./",
+    "build": "npm run clean && npm run build:parcel"
+  },
+  "author": "Chris Chen",
+  "license": "ISC",
+  "dependencies": {
+    "gsap": "^3.4.2",
+    "jquery": "^3.5.1",
+    "node-sass": "^4.14.1",
+    "three": "^0.119.1"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.32.2"
+  }
+}
